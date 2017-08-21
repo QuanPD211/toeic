@@ -1,0 +1,86 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+h1,h2,h3,h4,h5,h6,ul,li,p{
+	margin: 0;
+	padding: 0;
+}
+a{
+	text-decoration: none;
+}
+body{
+	background: #ddd;
+}
+
+.container{
+	margin-top: 40px;
+	margin-bottom: 40px;
+	background: #fff;
+}
+.menu-right{
+	background: #202227;
+	margin: 0;
+	padding: 0;
+}
+.content{
+
+}
+.logo{
+	background: #202227;
+	
+}
+.logo h3{
+	color: #fff;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+.tab-content{
+
+}
+.tab-content h4{
+	margin-top: 10px;
+	margin-bottom: 10px;
+	font-weight: bold;
+}
+.tab-content h3{
+	padding-top: 20px;
+	padding-bottom: 10px;
+}
+.sbm{
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+.image-preview-input {
+	position: relative;
+	overflow: hidden;
+	margin: 0px;    
+	color: #333;
+	background-color: #fff;
+	border-color: #ccc;    
+}
+.image-preview-input input[type=file] {
+	position: absolute;
+	top: 0;
+	right: 0;
+	margin: 0;
+	padding: 0;
+	font-size: 20px;
+	cursor: pointer;
+	opacity: 0;
+	filter: alpha(opacity=0);
+}
+.image-preview-input-title {
+	margin-left:2px;
+}
+.file {
+	visibility: hidden;
+	position: absolute;
+}
+.row-eq-height {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	flex-wrap: wrap;
+}

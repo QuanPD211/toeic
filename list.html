@@ -1,0 +1,1083 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>List</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="css/list.css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<!-- <script type="text/javascript" src="js/audio.js"></script> -->
+</head>
+<body>
+	<div class="container">
+		<div class="row row-eq-height">
+			<div class="menu-right col-sm-3 col-md-3 col-xs-12">
+				<!-- Logo -->
+				<div class="logo">
+					<h3 class="text-center">TOEIC TEST</h3>
+				</div>
+
+				<!-- Menu -->
+				<div class="list-group">
+					<a href="add.html" class="list-group-item text-center">
+						New Question
+					</a>
+					<a href="#" class="list-group-item disabled text-center">Question List</a>
+				</div>
+			</div>
+
+			<div class="list-content col-sm-9 col-md-9 col-xs-12">
+				<ul class="nav nav-tabs">
+					<li class="active"><a data-toggle="tab" href="#part1">Part 1</a></li>
+					<li><a data-toggle="tab" href="#part2">Part 2</a></li>
+					<li><a data-toggle="tab" href="#part3">Part 3</a></li>
+					<li><a data-toggle="tab" href="#part4">Part 4</a></li>
+					<li><a data-toggle="tab" href="#part5">Part 5</a></li>
+					<li><a data-toggle="tab" href="#part6">Part 6</a></li>
+					<li><a data-toggle="tab" href="#part7">Part 7</a></li>
+				</ul>
+
+				<div class="tab-content">
+					<!-- Part 1 -->
+					<div id="part1" class="tab-pane fade in active">
+						<div class="row">
+							<div class="col-md-7 col-sm-7 col-xs-12">
+								<h3>Part 1: Picture Description</h3>
+							</div>
+							<div class="col-md-5 col-sm-5 col-xs-12">
+								<form method="post" class="input-group add-on">
+									<input class="form-control" name="search_input" class="srch-term" id="input" type="text" placeholder="Search...">
+									<div class="input-group-btn">
+										<button class="btn btn-primary" type="submit"><i class="glyphicon glyphicon-search"></i></button>
+									</div>
+								</form>
+							</div>
+						</div>
+						<table class="table">
+							<thead>
+								<tr>
+									<th class="text-center">ID</th>
+									<th>IMAGE</th>
+									<th class="text-center">AUDIO</th>
+									<th class="text-center">ANSWER CHOICES</th>
+									<th class="text-center">CORRECT ANSWER</th>
+									<th class="text-center">EDIT</th>
+									<th class="text-center">DELETE</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<!-- id -->
+									<td class="text-center" rowspan="4">1</td>
+									<!-- Image -->
+									<td class="text-center" rowspan="4">
+										<img src="img/061.jpg" class="img-audio img-responsive">
+									</td>
+									<!-- Audio -->
+									<td class="text-center" rowspan="4">
+										<audio src="Audio/test.mp3" id="audio"></audio>
+										<span class="glyphicon glyphicon-play-circle b-play btn-player"></span>
+									</td>
+
+									<td class="text-center">A</td>
+									<!-- Answer -->
+									<td class="text-center" rowspan="4">A</td>
+									<td class="text-center" rowspan="4">
+										<a href="#"><span class="btn btn-info glyphicon glyphicon-edit"></span></a>
+									</td>
+									<td class="text-center" rowspan="4">
+										<a onclick="return confirm('Bạn chắc chắn xóa?')" href="#"><span class="btn btn-danger glyphicon glyphicon-trash"></span></a>
+									</td>
+								</tr>
+								<tr>
+									<td class="text-center">B</td>
+								</tr>
+								<tr>
+									<td class="text-center">C</td>
+								</tr>
+								<tr>
+									<td class="text-center">D</td>
+								</tr>
+								<tr>
+									<!-- id -->
+									<td class="text-center" rowspan="4">2</td>
+									<!-- Image -->
+									<td class="text-center" rowspan="4">
+										<img src="img/061.jpg" class="img-audio img-responsive">
+									</td>
+									<!-- Audio -->
+									<td class="text-center" rowspan="4">
+										<audio src="Audio/test.mp3" id="audio"></audio>
+										<span class="glyphicon glyphicon-play-circle b-play btn-player"></span>
+									</td>
+
+									<td class="text-center">A</td>
+									<!-- Answer -->
+									<td class="text-center" rowspan="4">A</td>
+									<td class="text-center" rowspan="4">
+										<a href="#"><span class="btn btn-info glyphicon glyphicon-edit"></span></a>
+									</td>
+									<td class="text-center" rowspan="4">
+										<a onclick="return confirm('Bạn chắc chắn xóa?')" href="#"><span class="btn btn-danger glyphicon glyphicon-trash"></span></a>
+									</td>
+								</tr>
+								<tr>
+									<td class="text-center">B</td>
+								</tr>
+								<tr>
+									<td class="text-center">C</td>
+								</tr>
+								<tr>
+									<td class="text-center">D</td>
+								</tr>
+								<tr>
+									<!-- id -->
+									<td class="text-center" rowspan="4">3</td>
+									<!-- Image -->
+									<td class="text-center" rowspan="4">
+										<img src="img/061.jpg" class="img-audio img-responsive">
+									</td>
+									<!-- Audio -->
+									<td class="text-center" rowspan="4">
+										<audio src="Audio/test.mp3" id="audio"></audio>
+										<span class="glyphicon glyphicon-play-circle b-play btn-player"></span>
+									</td>
+
+									<td class="text-center">A</td>
+									<!-- Answer -->
+									<td class="text-center" rowspan="4">A</td>
+									<td class="text-center" rowspan="4">
+										<a href="#"><span class="btn btn-info glyphicon glyphicon-edit"></span></a>
+									</td>
+									<td class="text-center" rowspan="4">
+										<a onclick="return confirm('Bạn chắc chắn xóa?')" href="#"><span class="btn btn-danger glyphicon glyphicon-trash"></span></a>
+									</td>
+								</tr>
+								<tr>
+									<td class="text-center">B</td>
+								</tr>
+								<tr>
+									<td class="text-center">C</td>
+								</tr>
+								<tr>
+									<td class="text-center">D</td>
+								</tr>
+							</tbody>
+						</table>
+						<div class="text-center">
+							<ul class="pagination">
+								<li><a href="#"><<</a></li>
+								<li><a href="#"><</a></li>
+								<li><a href="#">1</a></li>
+								<li class="active"><a href="#">2</a></li>
+								<li><a href="#">3</a></li>
+								<li><a href="#">></a></li>
+								<li><a href="#">>></a></li>
+							</ul> 
+						</div>
+					</div>
+
+					<!-- Part 2  -->
+					<div id="part2" class="tab-pane fade">
+						<div class="row">
+							<div class="col-md-7 col-sm-7 col-xs-12">
+								<h3>Part 2: Question Response</h3>
+							</div>
+							<div class="col-md-5 col-sm-5 col-xs-12">
+								<form method="post" class="input-group add-on">
+									<input class="form-control" name="search_input" class="srch-term" id="input" type="text" placeholder="Search...">
+									<div class="input-group-btn">
+										<button class="btn btn-primary" type="submit"><i class="glyphicon glyphicon-search"></i></button>
+									</div>
+								</form>
+							</div>
+						</div>
+						<table class="table">
+							<thead>
+								<tr>
+									<th class="text-center">ID</th>
+									<th class="text-center">AUDIO</th>
+									<th class="text-center">ANSWER CHOICES</th>
+									<th class="text-center">CORRECT ANSWER</th>
+									<th class="text-center">EDIT</th>
+									<th class="text-center">DELETE</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<!-- id -->
+									<td class="text-center" rowspan="4">1</td>
+									<!-- Audio -->
+									<td class="text-center" rowspan="4">
+										<audio src="Audio/test.mp3" id="audio"></audio>
+										<span class="glyphicon glyphicon-play-circle b-play btn-player"></span>
+									</td>
+									
+									<td class="text-center">A</td>
+
+									<!-- Correct Answer -->
+									<td class="text-center" rowspan="4">A</td>
+									<td class="text-center" rowspan="4">
+										<a href="#"><span class="btn btn-info glyphicon glyphicon-edit"></span></a>
+									</td>
+									<td class="text-center" rowspan="4">
+										<a onclick="return confirm('Bạn chắc chắn xóa?')" href="#"><span class="btn btn-danger glyphicon glyphicon-trash"></span></a>
+									</td>
+								</tr>
+
+								<tr>
+									<td class="text-center">B</td>
+								</tr>
+								<tr>
+									<td class="text-center">C</td>
+								</tr>
+								<tr>
+									<td class="text-center">D</td>
+								</tr>
+								<tr>
+									<!-- id -->
+									<td class="text-center" rowspan="4">2</td>
+									<!-- Audio -->
+									<td class="text-center" rowspan="4">
+										<audio src="Audio/test.mp3" id="audio"></audio>
+										<span class="glyphicon glyphicon-play-circle b-play btn-player"></span>
+									</td>
+									
+									<td class="text-center">A</td>
+
+									<!-- Correct Answer -->
+									<td class="text-center" rowspan="4">A</td>
+									<td class="text-center" rowspan="4">
+										<a href="#"><span class="btn btn-info glyphicon glyphicon-edit"></span></a>
+									</td>
+									<td class="text-center" rowspan="4">
+										<a onclick="return confirm('Bạn chắc chắn xóa?')" href="#"><span class="btn btn-danger glyphicon glyphicon-trash"></span></a>
+									</td>
+								</tr>
+
+								<tr>
+									<td class="text-center">B</td>
+								</tr>
+								<tr>
+									<td class="text-center">C</td>
+								</tr>
+								<tr>
+									<td class="text-center">D</td>
+								</tr>
+								<tr>
+									<!-- id -->
+									<td class="text-center" rowspan="4">3</td>
+									<!-- Audio -->
+									<td class="text-center" rowspan="4">
+										<audio src="Audio/test.mp3" id="audio"></audio>
+										<span class="glyphicon glyphicon-play-circle b-play btn-player"></span>
+									</td>
+									
+									<td class="text-center">A</td>
+
+									<!-- Correct Answer -->
+									<td class="text-center" rowspan="4">A</td>
+									<td class="text-center" rowspan="4">
+										<a href="#"><span class="btn btn-info glyphicon glyphicon-edit"></span></a>
+									</td>
+									<td class="text-center" rowspan="4">
+										<a onclick="return confirm('Bạn chắc chắn xóa?')" href="#"><span class="btn btn-danger glyphicon glyphicon-trash"></span></a>
+									</td>
+								</tr>
+
+								<tr>
+									<td class="text-center">B</td>
+								</tr>
+								<tr>
+									<td class="text-center">C</td>
+								</tr>
+								<tr>
+									<td class="text-center">D</td>
+								</tr>
+							</tbody>
+						</table>
+						<div class="text-center">
+							<ul class="pagination">
+								<li><a href="#"><<</a></li>
+								<li><a href="#"><</a></li>
+								<li><a href="#">1</a></li>
+								<li class="active"><a href="#">2</a></li>
+								<li><a href="#">3</a></li>
+								<li><a href="#">></a></li>
+								<li><a href="#">>></a></li>
+							</ul> 
+						</div>
+					</div>
+
+					<!-- Part3 -->
+					<div id="part3" class="tab-pane fade">
+						<div class="row">
+							<div class="col-md-7 col-sm-7 col-xs-12">
+								<h3>Part 3: Conversation</h3>
+							</div>
+							<div class="col-md-5 col-sm-5 col-xs-12">
+								<form method="post" class="input-group add-on">
+									<input class="form-control" name="search_input" class="srch-term" id="input" type="text" placeholder="Search...">
+									<div class="input-group-btn">
+										<button class="btn btn-primary" type="submit"><i class="glyphicon glyphicon-search"></i></button>
+									</div>
+								</form>
+							</div>
+						</div>
+						<table class="table">
+							<thead>
+								<tr>
+									<th class="text-center">ID</th>
+									<th class="text-center">AUDIO</th>
+									<th class="text-center">QUESTION</th>
+									<th class="text-center">ANSWER CHOICES</th>
+									<th class="text-center">CORRECT ANSWER</th>
+									<th class="text-center">EDIT</th>
+									<th class="text-center">DELETE</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td rowspan="12" class="text-center">1</td>
+									<td rowspan="12" class="text-center">
+										<audio src="Audio/test.mp3" id="audio"></audio>
+										<span class="glyphicon glyphicon-play-circle b-play btn-player"></span>
+									</td>
+									<td class="text-center" rowspan="4">Question 1</td>
+									<td class="text-center">A</td>
+
+									<td class="text-center" rowspan="4">B</td>
+									<td rowspan="12" class="text-center">
+										<a href="#"><span class="btn btn-info glyphicon glyphicon-edit"></span></a>
+									</td>
+									<td rowspan="12" class="text-center">
+										<a onclick="return confirm('Bạn chắc chắn xóa?')" href="#"><span class="btn btn-danger glyphicon glyphicon-trash"></span></a>
+									</td>
+								</tr>
+								
+								<tr>									
+									<td class="text-center">B</td>									
+								</tr>
+								<tr>									
+									<td class="text-center">C</td>									
+								</tr>
+								<tr>									
+									<td class="text-center">D</td>									
+								</tr>
+								<tr>									
+									<td class="text-center" rowspan="4">Question 2</td>
+									<td class="text-center">A</td>
+									<td class="text-center" rowspan="4">B</td>				
+								</tr>
+								<tr>									
+									<td class="text-center">B</td>									
+								</tr>
+								<tr>									
+									<td class="text-center">C</td>									
+								</tr>
+								<tr>									
+									<td class="text-center">D</td>									
+								</tr>
+								<tr>									
+									<td class="text-center" rowspan="4">Question 3</td>
+									<td class="text-center">A</td>
+									<td class="text-center" rowspan="4">B</td>				
+								</tr>
+								<tr>									
+									<td class="text-center">B</td>									
+								</tr>
+								<tr>									
+									<td class="text-center">C</td>									
+								</tr>
+								<tr>									
+									<td class="text-center">D</td>									
+								</tr>
+
+								<tr>
+									<td rowspan="12" class="text-center">2</td>
+									<td rowspan="12" class="text-center">
+										<audio src="Audio/test.mp3" id="audio"></audio>
+										<span class="glyphicon glyphicon-play-circle b-play btn-player"></span>
+									</td>
+									<td class="text-center" rowspan="4">Question 1</td>
+									<td class="text-center">A</td>
+
+									<td class="text-center" rowspan="4">B</td>
+									<td rowspan="12" class="text-center">
+										<a href="#"><span class="btn btn-info glyphicon glyphicon-edit"></span></a>
+									</td>
+									<td rowspan="12" class="text-center">
+										<a onclick="return confirm('Bạn chắc chắn xóa?')" href="#"><span class="btn btn-danger glyphicon glyphicon-trash"></span></a>
+									</td>
+								</tr>
+								
+								<tr>									
+									<td class="text-center">B</td>									
+								</tr>
+								<tr>									
+									<td class="text-center">C</td>									
+								</tr>
+								<tr>									
+									<td class="text-center">D</td>									
+								</tr>
+								<tr>									
+									<td class="text-center" rowspan="4">Question 2</td>
+									<td class="text-center">A</td>
+									<td class="text-center" rowspan="4">B</td>				
+								</tr>
+								<tr>									
+									<td class="text-center">B</td>									
+								</tr>
+								<tr>									
+									<td class="text-center">C</td>									
+								</tr>
+								<tr>									
+									<td class="text-center">D</td>									
+								</tr>
+								<tr>									
+									<td class="text-center" rowspan="4">Question 3</td>
+									<td class="text-center">A</td>
+									<td class="text-center" rowspan="4">B</td>				
+								</tr>
+								<tr>									
+									<td class="text-center">B</td>									
+								</tr>
+								<tr>									
+									<td class="text-center">C</td>									
+								</tr>
+								<tr>									
+									<td class="text-center">D</td>									
+								</tr>							
+							</tbody>
+						</table>
+						<div class="text-center">
+							<ul class="pagination">
+								<li><a href="#"><<</a></li>
+								<li><a href="#"><</a></li>
+								<li><a href="#">1</a></li>
+								<li class="active"><a href="#">2</a></li>
+								<li><a href="#">3</a></li>
+								<li><a href="#">></a></li>
+								<li><a href="#">>></a></li>
+							</ul> 
+						</div>
+					</div>
+					<!-- Part 4 -->
+					<div id="part4" class="tab-pane fade">
+						<div class="row">
+							<div class="col-md-7 col-sm-7 col-xs-12">
+								<h3>Part 4: Short Talk</h3>
+							</div>
+							<div class="col-md-5 col-sm-5 col-xs-12">
+								<form method="post" class="input-group add-on">
+									<input class="form-control" name="search_input" class="srch-term" id="input" type="text" placeholder="Search...">
+									<div class="input-group-btn">
+										<button class="btn btn-primary" type="submit"><i class="glyphicon glyphicon-search"></i></button>
+									</div>
+								</form>
+							</div>
+						</div>
+						<table class="table">
+							<thead>
+								<tr>
+									<th class="text-center">ID</th>
+									<th class="text-center">AUDIO</th>
+									<th class="text-center">QUESTION</th>
+									<th class="text-center">ANSWER CHOICES</th>
+									<th class="text-center">CORRECT ANSWER</th>
+									<th class="text-center">EDIT</th>
+									<th class="text-center">DELETE</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td rowspan="12" class="text-center">1</td>
+									<td rowspan="12" class="text-center">
+										<audio src="Audio/test.mp3" id="audio"></audio>
+										<span class="glyphicon glyphicon-play-circle b-play btn-player"></span>
+									</td>
+									<td class="text-center" rowspan="4">Question 1</td>
+									<td class="text-center">A</td>
+
+									<td class="text-center" rowspan="4">B</td>
+									<td rowspan="12" class="text-center">
+										<a href="#"><span class="btn btn-info glyphicon glyphicon-edit"></span></a>
+									</td>
+									<td rowspan="12" class="text-center">
+										<a onclick="return confirm('Bạn chắc chắn xóa?')" href="#"><span class="btn btn-danger glyphicon glyphicon-trash"></span></a>
+									</td>
+								</tr>
+								
+								<tr>									
+									<td class="text-center">B</td>									
+								</tr>
+								<tr>									
+									<td class="text-center">C</td>									
+								</tr>
+								<tr>									
+									<td class="text-center">D</td>									
+								</tr>
+								<tr>									
+									<td class="text-center" rowspan="4">Question 2</td>
+									<td class="text-center">A</td>
+									<td class="text-center" rowspan="4">B</td>				
+								</tr>
+								<tr>									
+									<td class="text-center">B</td>									
+								</tr>
+								<tr>									
+									<td class="text-center">C</td>									
+								</tr>
+								<tr>									
+									<td class="text-center">D</td>									
+								</tr>
+								<tr>									
+									<td class="text-center" rowspan="4">Question 3</td>
+									<td class="text-center">A</td>
+									<td class="text-center" rowspan="4">B</td>				
+								</tr>
+								<tr>									
+									<td class="text-center">B</td>									
+								</tr>
+								<tr>									
+									<td class="text-center">C</td>									
+								</tr>
+								<tr>									
+									<td class="text-center">D</td>									
+								</tr>
+
+								<tr>
+									<td rowspan="12" class="text-center">2</td>
+									<td rowspan="12" class="text-center">
+										<audio src="Audio/test.mp3" id="audio"></audio>
+										<span class="glyphicon glyphicon-play-circle b-play btn-player"></span>
+									</td>
+									<td class="text-center" rowspan="4">Question 1</td>
+									<td class="text-center">A</td>
+
+									<td class="text-center" rowspan="4">B</td>
+									<td rowspan="12" class="text-center">
+										<a href="#"><span class="btn btn-info glyphicon glyphicon-edit"></span></a>
+									</td>
+									<td rowspan="12" class="text-center">
+										<a onclick="return confirm('Bạn chắc chắn xóa?')" href="#"><span class="btn btn-danger glyphicon glyphicon-trash"></span></a>
+									</td>
+								</tr>
+								
+								<tr>									
+									<td class="text-center">B</td>									
+								</tr>
+								<tr>									
+									<td class="text-center">C</td>									
+								</tr>
+								<tr>									
+									<td class="text-center">D</td>									
+								</tr>
+								<tr>									
+									<td class="text-center" rowspan="4">Question 2</td>
+									<td class="text-center">A</td>
+									<td class="text-center" rowspan="4">B</td>				
+								</tr>
+								<tr>									
+									<td class="text-center">B</td>									
+								</tr>
+								<tr>									
+									<td class="text-center">C</td>									
+								</tr>
+								<tr>									
+									<td class="text-center">D</td>									
+								</tr>
+								<tr>									
+									<td class="text-center" rowspan="4">Question 3</td>
+									<td class="text-center">A</td>
+									<td class="text-center" rowspan="4">B</td>				
+								</tr>
+								<tr>									
+									<td class="text-center">B</td>									
+								</tr>
+								<tr>									
+									<td class="text-center">C</td>									
+								</tr>
+								<tr>									
+									<td class="text-center">D</td>									
+								</tr>
+
+
+
+							
+							</tbody>
+						</table>
+						<div class="text-center">
+							<ul class="pagination">
+								<li><a href="#"><<</a></li>
+								<li><a href="#"><</a></li>
+								<li><a href="#">1</a></li>
+								<li class="active"><a href="#">2</a></li>
+								<li><a href="#">3</a></li>
+								<li><a href="#">></a></li>
+								<li><a href="#">>></a></li>
+							</ul> 
+						</div>
+					</div>
+					<!-- Part 5  -->
+					<div id="part5" class="tab-pane fade">						
+						<div class="row">
+							<div class="col-md-7 col-sm-7 col-xs-12">
+								<h3>Part 5: Incomplete Sentences</h3>
+							</div>
+							<div class="col-md-5 col-sm-5 col-xs-12">
+								<form method="post" class="input-group add-on">
+									<input class="form-control" name="search_input" class="srch-term" id="input" type="text" placeholder="Search...">
+									<div class="input-group-btn">
+										<button class="btn btn-primary" type="submit"><i class="glyphicon glyphicon-search"></i></button>
+									</div>
+								</form>
+							</div>
+						</div>
+						<table class="table">
+							<thead>
+								<tr>
+									<th class="text-center">ID</th>
+									<th class="text-center">QUESTION</th>
+									<th class="text-center">ANSWER CHOICES</th>
+									<th class="text-center">CORRECT ANSWER</th>
+									<th class="text-center">EDIT</th>
+									<th class="text-center">DELETE</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<!-- id -->
+									<td class="text-center" rowspan="4">1</td>
+									<!-- Question -->
+									<td class="text-center" rowspan="4">
+										Hello
+									</td>
+									
+									<td class="text-center">A</td>
+
+									<!-- Correct Answer -->
+									<td class="text-center" rowspan="4">A</td>
+									<td class="text-center" rowspan="4">
+										<a href="#"><span class="btn btn-info glyphicon glyphicon-edit"></span></a>
+									</td>
+									<td class="text-center" rowspan="4">
+										<a onclick="return confirm('Bạn chắc chắn xóa?')" href="#"><span class="btn btn-danger glyphicon glyphicon-trash"></span></a>
+									</td>
+								</tr>
+
+								<tr>
+									<td class="text-center">B</td>
+								</tr>
+								<tr>
+									<td class="text-center">C</td>
+								</tr>
+								<tr>
+									<td class="text-center">D</td>
+								</tr>
+								<tr>
+									<!-- id -->
+									<td class="text-center" rowspan="4">2</td>
+									<!-- Question -->
+									<td class="text-center" rowspan="4">
+										How are you
+									</td>
+									
+									<td class="text-center">A</td>
+
+									<!-- Correct Answer -->
+									<td class="text-center" rowspan="4">A</td>
+									<td class="text-center" rowspan="4">
+										<a href="#"><span class="btn btn-info glyphicon glyphicon-edit"></span></a>
+									</td>
+									<td class="text-center" rowspan="4">
+										<a onclick="return confirm('Bạn chắc chắn xóa?')" href="#"><span class="btn btn-danger glyphicon glyphicon-trash"></span></a>
+									</td>
+								</tr>
+
+								<tr>
+									<td class="text-center">B</td>
+								</tr>
+								<tr>
+									<td class="text-center">C</td>
+								</tr>
+								<tr>
+									<td class="text-center">D</td>
+								</tr>
+								<tr>
+									<!-- id -->
+									<td class="text-center" rowspan="4">3</td>
+									<!-- Question -->
+									<td class="text-center" rowspan="4">
+										ABC
+									</td>
+									
+									<td class="text-center">A</td>
+
+									<!-- Correct Answer -->
+									<td class="text-center" rowspan="4">A</td>
+									<td class="text-center" rowspan="4">
+										<a href="#"><span class="btn btn-info glyphicon glyphicon-edit"></span></a>
+									</td>
+									<td class="text-center" rowspan="4">
+										<a onclick="return confirm('Bạn chắc chắn xóa?')" href="#"><span class="btn btn-danger glyphicon glyphicon-trash"></span></a>
+									</td>
+								</tr>
+
+								<tr>
+									<td class="text-center">B</td>
+								</tr>
+								<tr>
+									<td class="text-center">C</td>
+								</tr>
+								<tr>
+									<td class="text-center">D</td>
+								</tr>
+							</tbody>
+						</table>
+						<div class="text-center">
+							<ul class="pagination">
+								<li><a href="#"><<</a></li>
+								<li><a href="#"><</a></li>
+								<li><a href="#">1</a></li>
+								<li class="active"><a href="#">2</a></li>
+								<li><a href="#">3</a></li>
+								<li><a href="#">></a></li>
+								<li><a href="#">>></a></li>
+							</ul> 
+						</div>
+					</div>
+					<!-- Part 6  -->
+					<div id="part6" class="tab-pane fade">
+						<div class="row">
+							<div class="col-md-7 col-sm-7 col-xs-12">
+								<h3>Part 6: Text Completion</h3>
+							</div>
+							<div class="col-md-5 col-sm-5 col-xs-12">
+								<form method="post" class="input-group add-on">
+									<input class="form-control" name="search_input" class="srch-term" id="input" type="text" placeholder="Search...">
+									<div class="input-group-btn">
+										<button class="btn btn-primary" type="submit"><i class="glyphicon glyphicon-search"></i></button>
+									</div>
+								</form>
+							</div>
+						</div>
+						<table class="table">
+							<thead>
+								<tr>
+									<th class="text-center">ID</th>
+									<th class="text-center">QUESTION</th>
+									<th class="text-center">ANSWER CHOICES</th>
+									<th class="text-center">CORRECT ANSWER</th>
+									<th class="text-center">EDIT</th>
+									<th class="text-center">DELETE</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td rowspan="12" class="text-center">1</td>
+									<td rowspan="12" class="text-center">
+										Test
+									</td>
+									<td class="text-center">A</td>
+
+									<td class="text-center" rowspan="4">B</td>
+									<td rowspan="12" class="text-center">
+										<a href="#"><span class="btn btn-info glyphicon glyphicon-edit"></span></a>
+									</td>
+									<td rowspan="12" class="text-center">
+										<a onclick="return confirm('Bạn chắc chắn xóa?')" href="#"><span class="btn btn-danger glyphicon glyphicon-trash"></span></a>
+									</td>
+								</tr>
+								
+								<tr>									
+									<td class="text-center">B</td>									
+								</tr>
+								<tr>									
+									<td class="text-center">C</td>									
+								</tr>
+								<tr>									
+									<td class="text-center">D</td>									
+								</tr>
+								<tr>									
+									<td class="text-center">A</td>
+									<td class="text-center" rowspan="4">B</td>				
+								</tr>
+								<tr>									
+									<td class="text-center">B</td>									
+								</tr>
+								<tr>									
+									<td class="text-center">C</td>									
+								</tr>
+								<tr>									
+									<td class="text-center">D</td>									
+								</tr>
+								<tr>									
+									<td class="text-center">A</td>
+									<td class="text-center" rowspan="4">B</td>				
+								</tr>
+								<tr>									
+									<td class="text-center">B</td>									
+								</tr>
+								<tr>									
+									<td class="text-center">C</td>									
+								</tr>
+								<tr>									
+									<td class="text-center">D</td>									
+								</tr>
+
+								<tr>
+									<td rowspan="12" class="text-center">2</td>
+									<td rowspan="12" class="text-center">
+										Test
+									</td>
+									<td class="text-center">A</td>
+
+									<td class="text-center" rowspan="4">B</td>
+									<td rowspan="12" class="text-center">
+										<a href="#"><span class="btn btn-info glyphicon glyphicon-edit"></span></a>
+									</td>
+									<td rowspan="12" class="text-center">
+										<a onclick="return confirm('Bạn chắc chắn xóa?')" href="#"><span class="btn btn-danger glyphicon glyphicon-trash"></span></a>
+									</td>
+								</tr>
+								
+								<tr>									
+									<td class="text-center">B</td>									
+								</tr>
+								<tr>									
+									<td class="text-center">C</td>									
+								</tr>
+								<tr>									
+									<td class="text-center">D</td>									
+								</tr>
+								<tr>									
+									<td class="text-center">A</td>
+									<td class="text-center" rowspan="4">B</td>				
+								</tr>
+								<tr>									
+									<td class="text-center">B</td>									
+								</tr>
+								<tr>									
+									<td class="text-center">C</td>									
+								</tr>
+								<tr>									
+									<td class="text-center">D</td>									
+								</tr>
+								<tr>									
+									<td class="text-center">A</td>
+									<td class="text-center" rowspan="4">B</td>				
+								</tr>
+								<tr>									
+									<td class="text-center">B</td>									
+								</tr>
+								<tr>									
+									<td class="text-center">C</td>									
+								</tr>
+								<tr>									
+									<td class="text-center">D</td>									
+								</tr>
+							
+							</tbody>
+						</table>
+						<div class="text-center">
+							<ul class="pagination">
+								<li><a href="#"><<</a></li>
+								<li><a href="#"><</a></li>
+								<li><a href="#">1</a></li>
+								<li class="active"><a href="#">2</a></li>
+								<li><a href="#">3</a></li>
+								<li><a href="#">></a></li>
+								<li><a href="#">>></a></li>
+							</ul> 
+						</div>					
+					</div>
+					<!-- Part 7 -->
+					<div id="part7" class="tab-pane fade">
+						<div class="row">
+							<div class="col-md-7 col-sm-7 col-xs-12">
+								<h3>Part 7: Reading Comprehension</h3>
+							</div>
+							<div class="col-md-5 col-sm-5 col-xs-12">
+								<form method="post" class="input-group add-on">
+									<input class="form-control" name="search_input" class="srch-term" id="input" type="text" placeholder="Search...">
+									<div class="input-group-btn">
+										<button class="btn btn-primary" type="submit"><i class="glyphicon glyphicon-search"></i></button>
+									</div>
+								</form>
+							</div>
+						</div>
+						<table class="table">
+							<thead>
+								<tr>
+									<th class="text-center">ID</th>
+									<th class="text-center">SENTENCE</th>
+									<th class="text-center">QUESTION</th>
+									<th class="text-center">ANSWER CHOICES</th>
+									<th class="text-center">CORRECT ANSWER</th>
+									<th class="text-center">EDIT</th>
+									<th class="text-center">DELETE</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td rowspan="12" class="text-center">1</td>
+									<td rowspan="12" class="text-center">
+										Example-1
+									</td>
+									<td class="text-center" rowspan="4">Question 1</td>
+									<td class="text-center">A</td>
+
+									<td class="text-center" rowspan="4">B</td>
+									<td rowspan="12" class="text-center">
+										<a href="#"><span class="btn btn-info glyphicon glyphicon-edit"></span></a>
+									</td>
+									<td rowspan="12" class="text-center">
+										<a onclick="return confirm('Bạn chắc chắn xóa?')" href="#"><span class="btn btn-danger glyphicon glyphicon-trash"></span></a>
+									</td>
+								</tr>
+								
+								<tr>									
+									<td class="text-center">B</td>									
+								</tr>
+								<tr>									
+									<td class="text-center">C</td>									
+								</tr>
+								<tr>									
+									<td class="text-center">D</td>									
+								</tr>
+								<tr>									
+									<td class="text-center" rowspan="4">Question 2</td>
+									<td class="text-center">A</td>
+									<td class="text-center" rowspan="4">B</td>				
+								</tr>
+								<tr>									
+									<td class="text-center">B</td>									
+								</tr>
+								<tr>									
+									<td class="text-center">C</td>									
+								</tr>
+								<tr>									
+									<td class="text-center">D</td>									
+								</tr>
+								<tr>									
+									<td class="text-center" rowspan="4">Question 3</td>
+									<td class="text-center">A</td>
+									<td class="text-center" rowspan="4">B</td>				
+								</tr>
+								<tr>									
+									<td class="text-center">B</td>									
+								</tr>
+								<tr>									
+									<td class="text-center">C</td>									
+								</tr>
+								<tr>									
+									<td class="text-center">D</td>									
+								</tr>
+
+								<tr>
+									<td rowspan="12" class="text-center">2</td>
+									<td rowspan="12" class="text-center">
+										Example-2
+									</td>
+									<td class="text-center" rowspan="4">Question 1</td>
+									<td class="text-center">A</td>
+
+									<td class="text-center" rowspan="4">B</td>
+									<td rowspan="12" class="text-center">
+										<a href="#"><span class="btn btn-info glyphicon glyphicon-edit"></span></a>
+									</td>
+									<td rowspan="12" class="text-center">
+										<a onclick="return confirm('Bạn chắc chắn xóa?')" href="#"><span class="btn btn-danger glyphicon glyphicon-trash"></span></a>
+									</td>
+								</tr>
+								
+								<tr>									
+									<td class="text-center">B</td>									
+								</tr>
+								<tr>									
+									<td class="text-center">C</td>									
+								</tr>
+								<tr>									
+									<td class="text-center">D</td>									
+								</tr>
+								<tr>									
+									<td class="text-center" rowspan="4">Question 2</td>
+									<td class="text-center">A</td>
+									<td class="text-center" rowspan="4">B</td>				
+								</tr>
+								<tr>									
+									<td class="text-center">B</td>									
+								</tr>
+								<tr>									
+									<td class="text-center">C</td>									
+								</tr>
+								<tr>									
+									<td class="text-center">D</td>									
+								</tr>
+								<tr>									
+									<td class="text-center" rowspan="4">Question 3</td>
+									<td class="text-center">A</td>
+									<td class="text-center" rowspan="4">B</td>				
+								</tr>
+								<tr>									
+									<td class="text-center">B</td>									
+								</tr>
+								<tr>									
+									<td class="text-center">C</td>									
+								</tr>
+								<tr>									
+									<td class="text-center">D</td>									
+								</tr>							
+							</tbody>
+						</table>
+						<div class="text-center">
+							<ul class="pagination">
+								<li><a href="#"><<</a></li>
+								<li><a href="#"><</a></li>
+								<li><a href="#">1</a></li>
+								<li class="active"><a href="#">2</a></li>
+								<li><a href="#">3</a></li>
+								<li><a href="#">></a></li>
+								<li><a href="#">>></a></li>
+							</ul> 
+						</div>							
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<script>
+	$(document).on('click', '.btn-player', function() {
+		var audio = $(this).parent().find('audio')[0];
+		console.log(audio);
+		if (audio.paused) {
+			audio.play();
+			$(this).removeClass('glyphicon-play-circle')
+			$(this).addClass('glyphicon-pause')
+		}else{
+			audio.pause();
+			// audio.currentTime = 0
+			$(this).addClass('glyphicon-play-circle')
+			$(this).removeClass('glyphicon-pause')
+		}
+	});
+		// function play() {
+		// 	var audio = document.getElementById('audio');
+		// 	if (audio.paused) {
+		// 		audio.play();
+		// 		$('#play').removeClass('glyphicon-play-circle')
+		// 		$('#play').addClass('glyphicon-pause')
+		// 	}else{
+		// 		audio.pause();
+		// 		// audio.currentTime = 0
+		// 		$('#play').addClass('glyphicon-play-circle')
+		// 		$('#play').removeClass('glyphicon-pause')
+		// 	}
+		// }
+	</script>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Test</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="css/test.css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="topnav" id="myTopnav">
+				<ul>
+					<li>
+						<a href="#home">
+							<img src="img/logo.png">
+						</a>
+					</li>
+					<li>
+						<a href="#news">News</a>
+					</li>
+					<li>
+						<a href="#contact">Contact</a>
+					</li>
+					<li>
+						<a href="#about">About</a>
+					</li>
+					<li>
+						<a href="#about">About</a>
+					</li>
+					<li>
+						<a href="#about">About</a>
+					</li>
+					<li>					
+						<form method="post" class="input-group add-on">
+							<input class="form-control" name="search_input" class="srch-term" id="input" type="text" placeholder="Search...">
+							<div class="input-group-btn">
+								<button class="btn btn-primary" type="submit"><i class="glyphicon glyphicon-search"></i></button>
+							</div>
+						</form>						
+					</li>
+					<a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+				</ul>
+			</div> 
+		</div>
+	</div>
+</body>
+<script type="text/javascript">
+	/* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
+	function myFunction() {
+		var x = document.getElementById("myTopnav");
+		if (x.className === "topnav") {
+			x.className += " responsive";
+		} else {
+			x.className = "topnav";
+		}
+	}
+</script>
+</html>

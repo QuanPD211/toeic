@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Add</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="css/add.css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/img-animation.js"></script>
+	<script type="text/javascript" src="js/file-animation.js"></script>
+</head>
+<body>
+	<div class="container">
+		<div class="row row-eq-height">
+			<div class="menu-right col-sm-3 col-md-3 col-xs-12">
+				<!-- Logo -->
+				<div class="logo">
+					<h3 class="text-center">TOEIC TEST</h3>
+				</div>
+
+				<!-- Menu -->
+				<div class="list-group">
+					<a href="#" class="list-group-item disabled text-center">
+						New Question
+					</a>
+					<a href="list.html" class="list-group-item text-center">Question List</a>
+				</div>
+			</div>
+			
+			<!-- Tab Input -->
+			<div class="content col-sm-9 col-md-9 col-xs-12">
+				<ul class="nav nav-tabs">
+					<li class="active"><a data-toggle="tab" href="#part1">Part 1</a></li>
+					<li><a data-toggle="tab" href="#part2">Part 2</a></li>
+					<li><a data-toggle="tab" href="#part3">Part 3</a></li>
+					<li><a data-toggle="tab" href="#part4">Part 4</a></li>
+					<li><a data-toggle="tab" href="#part5">Part 5</a></li>
+					<li><a data-toggle="tab" href="#part6">Part 6</a></li>
+					<li><a data-toggle="tab" href="#part7">Part 7</a></li>
+				</ul>
+
+				<div class="tab-content">
+					<!-- Part 1 -->
+					<div id="part1" class="tab-pane fade in active">
+						<form method="post">
+							<!-- Input Image -->
+							<h3>Part 1: Picture Description</h3>
+							<h4>Image</h4>
+							<div class="input-group image-preview">							
+								<input type="text" class="form-control image-preview-filename" disabled="disabled"> <!-- don't give a name === doesn't send on POST/GET -->
+								<span class="input-group-btn">
+									<!-- image-preview-clear button -->
+									<button type="button" class="btn btn-default image-preview-clear" style="display:none;">
+										<span class="glyphicon glyphicon-remove"></span> Clear
+									</button>
+									<!-- image-preview-input -->
+									<div class="btn btn-default image-preview-input">
+										<span class="glyphicon glyphicon-folder-open"></span>
+										<span class="image-preview-input-title">Browse</span>
+										<input type="file" accept="image/png, image/jpeg, image/gif" name="input-file-preview"/> <!-- rename it -->
+									</div>
+								</span>
+							</div><!-- /input-group image-preview [TO HERE]-->
+							
+							<h4>Answer Choices</h4>
+							<div class="form-group">
+								<label for="focusedInput">1</label>
+								<input class="form-control" id="focusedInput" type="text">
+							</div>
+							<div class="form-group">
+								<label for="focusedInput">2</label>
+								<input class="form-control" id="focusedInput" type="text">
+							</div>
+							<div class="form-group">
+								<label for="focusedInput">3</label>
+								<input class="form-control" id="focusedInput" type="text">
+							</div>
+							<div class="form-group">
+								<label for="focusedInput">4</label>
+								<input class="form-control" id="focusedInput" type="text">
+							</div>
+
+							<!-- Input Answer -->
+							<h4>Correct Answer</h4>
+							<label class="radio-inline"><input type="radio" name="optradio">1</label>
+							<label class="radio-inline"><input type="radio" name="optradio">2</label>
+							<label class="radio-inline"><input type="radio" name="optradio">3</label>
+							<label class="radio-inline"><input type="radio" name="optradio">4</label>
+
+							<!-- Input Audio -->
+							<h4>Audio</h4>
+							<div class="form-group">
+								<input type="file" name="img[]" class="file">
+								<div class="input-group col-xs-12">
+									<span class="input-group-addon"><i class="glyphicon glyphicon-volume-up"></i></span>
+									<input type="text" class="form-control input-lg" disabled placeholder="Upload Audio">
+									<span class="input-group-btn">
+										<button class="browse btn btn-primary input-lg" type="button"><i class="glyphicon glyphicon-folder-open"></i> Browse</button>
+									</span>
+								</div>
+							</div>
+
+							<!-- Input Tape Script -->
+							<div class="form-group">
+								<h4>Tape Script</h4>
+								<textarea class="form-control" rows="5" id="comment"></textarea>
+							</div> 
+							<!-- Submit -->
+							<button type="submit" class="btn btn-default sbm">Submit</button>
+						</form>  
+					</div>
+
+					<!-- Part 2  -->
+					<div id="part2" class="tab-pane fade">
+						<h3>Part 2: Question Response</h3>
+						<form method="post">
+							<!-- Input Audio -->
+							<h4>Audio</h4>
+							<div class="form-group">
+								<input type="file" name="img[]" class="file">
+								<div class="input-group col-xs-12">
+									<span class="input-group-addon"><i class="glyphicon glyphicon-volume-up"></i></span>
+									<input type="text" class="form-control input-lg" disabled placeholder="Upload Audio">
+									<span class="input-group-btn">
+										<button class="browse btn btn-primary input-lg" type="button"><i class="glyphicon glyphicon-search"></i> Browse</button>
+									</span>
+								</div>
+							</div>
+
+							<h4>Answer Choices</h4>
+							<div class="form-group">
+								<label for="focusedInput">1</label>
+								<input class="form-control" id="focusedInput" type="text">
+							</div>
+							<div class="form-group">
+								<label for="focusedInput">2</label>
+								<input class="form-control" id="focusedInput" type="text">
+							</div>
+							<div class="form-group">
+								<label for="focusedInput">3</label>
+								<input class="form-control" id="focusedInput" type="text">
+							</div>
+							<div class="form-group">
+								<label for="focusedInput">4</label>
+								<input class="form-control" id="focusedInput" type="text">
+							</div>
+							<!-- Input Answer -->
+							<h4>Answer</h4>
+							<label class="radio-inline"><input type="radio" name="optradio">A</label>
+							<label class="radio-inline"><input type="radio" name="optradio">B</label>
+							<label class="radio-inline"><input type="radio" name="optradio">C</label>
+
+							<!-- Input Tape Script -->
+							<div class="form-group">
+								<h4>Tape Script</h4>
+								<textarea class="form-control" rows="5" id="comment"></textarea>
+							</div> 
+							<!-- Submit -->
+							<button type="submit" class="btn btn-default sbm">Submit</button>
+						</form>
+					</div>
+
+					<!-- Part3 -->
+					<div id="part3" class="tab-pane fade">
+						<h3>Part 3: Conversation</h3>
+						<form method="post">
+							<!-- Input Audio -->
+							<h4>Audio</h4>
+							<div class="form-group">
+								<input type="file" name="img[]" class="file">
+								<div class="input-group col-xs-12">
+									<span class="input-group-addon"><i class="glyphicon glyphicon-volume-up"></i></span>
+									<input type="text" class="form-control input-lg" disabled placeholder="Upload Audio">
+									<span class="input-group-btn">
+										<button class="browse btn btn-primary input-lg" type="button"><i class="glyphicon glyphicon-search"></i> Browse</button>
+									</span>
+								</div>
+							</div>
+							<!-- Question Answer -->
+							<div class="form-group">
+								<h4><label for="que">Question 1</label></h4>
+								<input type="text" class="form-control" id="que">
+							</div>
+							<h4>Answer Choices</h4>
+							<div class="form-group">
+								<label for="focusedInput">1</label>
+								<input class="form-control" id="focusedInput" type="text">
+							</div>
+							<div class="form-group">
+								<label for="focusedInput">2</label>
+								<input class="form-control" id="focusedInput" type="text">
+							</div>
+							<div class="form-group">
+								<label for="focusedInput">3</label>
+								<input class="form-control" id="focusedInput" type="text">
+							</div>
+							<div class="form-group">
+								<label for="focusedInput">4</label>
+								<input class="form-control" id="focusedInput" type="text">
+							</div>
+							<h4>Answer</h4>
+							<label class="radio-inline"><input type="radio" name="optradio">A</label>
+							<label class="radio-inline"><input type="radio" name="optradio">B</label>
+							<label class="radio-inline"><input type="radio" name="optradio">C</label>
+							<label class="radio-inline"><input type="radio" name="optradio">D</label>
+
+							<div class="form-group">
+								<h4><label for="que">Question 2</label></h4>
+								<input type="text" class="form-control" id="que">
+							</div>
+							<h4>Answer Choices</h4>
+							<div class="form-group">
+								<label for="focusedInput">1</label>
+								<input class="form-control" id="focusedInput" type="text">
+							</div>
+							<div class="form-group">
+								<label for="focusedInput">2</label>
+								<input class="form-control" id="focusedInput" type="text">
+							</div>
+							<div class="form-group">
+								<label for="focusedInput">3</label>
+								<input class="form-control" id="focusedInput" type="text">
+							</div>
+							<div class="form-group">
+								<label for="focusedInput">4</label>
+								<input class="form-control" id="focusedInput" type="text">
+							</div>
+							<h4>Answer</h4>
+							<label class="radio-inline"><input type="radio" name="optradio">A</label>
+							<label class="radio-inline"><input type="radio" name="optradio">B</label>
+							<label class="radio-inline"><input type="radio" name="optradio">C</label>
+							<label class="radio-inline"><input type="radio" name="optradio">D</label>
+
+							<div class="form-group">
+								<h4><label for="que">Question 3</label></h4>
+								<input type="text" class="form-control" id="que">
+							</div>
+							<h4>Answer Choices</h4>
+							<div class="form-group">
+								<label for="focusedInput">1</label>
+								<input class="form-control" id="focusedInput" type="text">
+							</div>
+							<div class="form-group">
+								<label for="focusedInput">2</label>
+								<input class="form-control" id="focusedInput" type="text">
+							</div>
+							<div class="form-group">
+								<label for="focusedInput">3</label>
+								<input class="form-control" id="focusedInput" type="text">
+							</div>
+							<div class="form-group">
+								<label for="focusedInput">4</label>
+								<input class="form-control" id="focusedInput" type="text">
+							</div>
+							<h4>Answer</h4>
+							<label class="radio-inline"><input type="radio" name="optradio">A</label>
+							<label class="radio-inline"><input type="radio" name="optradio">B</label>
+							<label class="radio-inline"><input type="radio" name="optradio">C</label>
+							<label class="radio-inline"><input type="radio" name="optradio">D</label>
+
+							<!-- Tape Script -->
+							<div class="form-group">
+								<h4>Tape Script</h4>
+								<textarea class="form-control" rows="5" id="comment"></textarea>
+							</div> 
+							<!-- Submit -->
+							<button type="submit" class="btn btn-default sbm">Submit</button>
+						</form>
+					</div>
+					<!-- Part 4 -->
+					<div id="part4" class="tab-pane fade">
+						<h3>Part 4: Short Talk</h3>
+						<form method="post">
+							<!-- Input Audio -->
+							<h4>Audio</h4>
+							<div class="form-group">
+								<input type="file" name="img[]" class="file">
+								<div class="input-group col-xs-12">
+									<span class="input-group-addon"><i class="glyphicon glyphicon-volume-up"></i></span>
+									<input type="text" class="form-control input-lg" disabled placeholder="Upload Audio">
+									<span class="input-group-btn">
+										<button class="browse btn btn-primary input-lg" type="button"><i class="glyphicon glyphicon-search"></i> Browse</button>
+									</span>
+								</div>
+							</div>
+							<!-- Question Answer -->
+							<div class="form-group">
+								<h4><label for="que">Question 1</label></h4>
+								<input type="text" class="form-control" id="que">
+							</div>
+							<h4>Answer Choices</h4>
+							<div class="form-group">
+								<label for="focusedInput">1</label>
+								<input class="form-control" id="focusedInput" type="text">
+							</div>
+							<div class="form-group">
+								<label for="focusedInput">2</label>
+								<input class="form-control" id="focusedInput" type="text">
+							</div>
+							<div class="form-group">
+								<label for="focusedInput">3</label>
+								<input class="form-control" id="focusedInput" type="text">
+							</div>
+							<div class="form-group">
+								<label for="focusedInput">4</label>
+								<input class="form-control" id="focusedInput" type="text">
+							</div>
+							<h4>Answer</h4>
+							<label class="radio-inline"><input type="radio" name="optradio">A</label>
+							<label class="radio-inline"><input type="radio" name="optradio">B</label>
+							<label class="radio-inline"><input type="radio" name="optradio">C</label>
+							<label class="radio-inline"><input type="radio" name="optradio">D</label>
+
+							<div class="form-group">
+								<h4><label for="que">Question 2</label></h4>
+								<input type="text" class="form-control" id="que">
+							</div>
+							<h4>Answer Choices</h4>
+							<div class="form-group">
+								<label for="focusedInput">1</label>
+								<input class="form-control" id="focusedInput" type="text">
+							</div>
+							<div class="form-group">
+								<label for="focusedInput">2</label>
+								<input class="form-control" id="focusedInput" type="text">
+							</div>
+							<div class="form-group">
+								<label for="focusedInput">3</label>
+								<input class="form-control" id="focusedInput" type="text">
+							</div>
+							<div class="form-group">
+								<label for="focusedInput">4</label>
+								<input class="form-control" id="focusedInput" type="text">
+							</div>
+							<h4>Answer</h4>
+							<label class="radio-inline"><input type="radio" name="optradio">A</label>
+							<label class="radio-inline"><input type="radio" name="optradio">B</label>
+							<label class="radio-inline"><input type="radio" name="optradio">C</label>
+							<label class="radio-inline"><input type="radio" name="optradio">D</label>
+
+							<div class="form-group">
+								<h4><label for="que">Question 3</label></h4>
+								<input type="text" class="form-control" id="que">
+							</div>
+							<h4>Answer Choices</h4>
+							<div class="form-group">
+								<label for="focusedInput">1</label>
+								<input class="form-control" id="focusedInput" type="text">
+							</div>
+							<div class="form-group">
+								<label for="focusedInput">2</label>
+								<input class="form-control" id="focusedInput" type="text">
+							</div>
+							<div class="form-group">
+								<label for="focusedInput">3</label>
+								<input class="form-control" id="focusedInput" type="text">
+							</div>
+							<div class="form-group">
+								<label for="focusedInput">4</label>
+								<input class="form-control" id="focusedInput" type="text">
+							</div>
+							<h4>Answer</h4>
+							<label class="radio-inline"><input type="radio" name="optradio">A</label>
+							<label class="radio-inline"><input type="radio" name="optradio">B</label>
+							<label class="radio-inline"><input type="radio" name="optradio">C</label>
+							<label class="radio-inline"><input type="radio" name="optradio">D</label>
+
+							<!-- Tape Script -->
+							<div class="form-group">
+								<h4>Tape Script</h4>
+								<textarea class="form-control" rows="5" id="comment"></textarea>
+							</div> 
+							<!-- Submit -->
+							<button type="submit" class="btn btn-default sbm">Submit</button>
+						</form>
+					</div>
+					<!-- Part 5  -->
+					<div id="part5" class="tab-pane fade">
+						<form method="post">
+							<h3>Part 5: Incomplete Sentences</h3>
+							<div class="form-group">
+								<h4><label for="que">Question</label></h4>
+								<input type="text" class="form-control" id="que">
+							</div>
+							<h4>Answer Choices</h4>
+							<div class="form-group">
+								<label for="focusedInput">1</label>
+								<input class="form-control" id="focusedInput" type="text">
+							</div>
+							<div class="form-group">
+								<label for="focusedInput">2</label>
+								<input class="form-control" id="focusedInput" type="text">
+							</div>
+							<div class="form-group">
+								<label for="focusedInput">3</label>
+								<input class="form-control" id="focusedInput" type="text">
+							</div>
+							<div class="form-group">
+								<label for="focusedInput">4</label>
+								<input class="form-control" id="focusedInput" type="text">
+							</div>
+							<h4>Answer</h4>
+							<label class="radio-inline"><input type="radio" name="optradio">A</label>
+							<label class="radio-inline"><input type="radio" name="optradio">B</label>
+							<label class="radio-inline"><input type="radio" name="optradio">C</label>
+							<label class="radio-inline"><input type="radio" name="optradio">D</label>
+							<br>
+							<button type="submit" class="btn btn-default sbm">Submit</button>
+							
+						</form>
+					</div>
+					<!-- Part 6  -->
+					<div id="part6" class="tab-pane fade">
+
+						<h3>Part 6: Text Completion</h3>
+						<form method="post">
+							<!-- Sentence -->
+							<div class="form-group">
+								<h4>Sentence</h4>
+								<textarea class="form-control" rows="5" id="comment"></textarea>
+							</div>
+							<!-- Q&A -->
+							<h4>Answer Choices</h4>
+							<div class="form-group">
+								<label for="focusedInput">1</label>
+								<input class="form-control" id="focusedInput" type="text">
+							</div>
+							<div class="form-group">
+								<label for="focusedInput">2</label>
+								<input class="form-control" id="focusedInput" type="text">
+							</div>
+							<div class="form-group">
+								<label for="focusedInput">3</label>
+								<input class="form-control" id="focusedInput" type="text">
+							</div>
+							<div class="form-group">
+								<label for="focusedInput">4</label>
+								<input class="form-control" id="focusedInput" type="text">
+							</div>
+
+							<h4>Answer 1</h4>
+							<label class="radio-inline"><input type="radio" name="optradio">A</label>
+							<label class="radio-inline"><input type="radio" name="optradio">B</label>
+							<label class="radio-inline"><input type="radio" name="optradio">C</label>
+							<label class="radio-inline"><input type="radio" name="optradio">D</label>
+
+							<h4>Answer Choices</h4>
+							<div class="form-group">
+								<label for="focusedInput">1</label>
+								<input class="form-control" id="focusedInput" type="text">
+							</div>
+							<div class="form-group">
+								<label for="focusedInput">2</label>
+								<input class="form-control" id="focusedInput" type="text">
+							</div>
+							<div class="form-group">
+								<label for="focusedInput">3</label>
+								<input class="form-control" id="focusedInput" type="text">
+							</div>
+							<div class="form-group">
+								<label for="focusedInput">4</label>
+								<input class="form-control" id="focusedInput" type="text">
+							</div>
+
+							<h4>Answer 2</h4>
+							<label class="radio-inline"><input type="radio" name="optradio">A</label>
+							<label class="radio-inline"><input type="radio" name="optradio">B</label>
+							<label class="radio-inline"><input type="radio" name="optradio">C</label>
+							<label class="radio-inline"><input type="radio" name="optradio">D</label>
+
+							<h4>Answer Choices</h4>
+							<div class="form-group">
+								<label for="focusedInput">1</label>
+								<input class="form-control" id="focusedInput" type="text">
+							</div>
+							<div class="form-group">
+								<label for="focusedInput">2</label>
+								<input class="form-control" id="focusedInput" type="text">
+							</div>
+							<div class="form-group">
+								<label for="focusedInput">3</label>
+								<input class="form-control" id="focusedInput" type="text">
+							</div>
+							<div class="form-group">
+								<label for="focusedInput">4</label>
+								<input class="form-control" id="focusedInput" type="text">
+							</div>
+
+							<h4>Answer 3</h4>
+							<label class="radio-inline"><input type="radio" name="optradio">A</label>
+							<label class="radio-inline"><input type="radio" name="optradio">B</label>
+							<label class="radio-inline"><input type="radio" name="optradio">C</label>
+							<label class="radio-inline"><input type="radio" name="optradio">D</label>
+
+							<h4>Answer Choices</h4>
+							<div class="form-group">
+								<label for="focusedInput">1</label>
+								<input class="form-control" id="focusedInput" type="text">
+							</div>
+							<div class="form-group">
+								<label for="focusedInput">2</label>
+								<input class="form-control" id="focusedInput" type="text">
+							</div>
+							<div class="form-group">
+								<label for="focusedInput">3</label>
+								<input class="form-control" id="focusedInput" type="text">
+							</div>
+							<div class="form-group">
+								<label for="focusedInput">4</label>
+								<input class="form-control" id="focusedInput" type="text">
+							</div>
+
+							<h4>Answer 4</h4>
+							<label class="radio-inline"><input type="radio" name="optradio">A</label>
+							<label class="radio-inline"><input type="radio" name="optradio">B</label>
+							<label class="radio-inline"><input type="radio" name="optradio">C</label>
+							<label class="radio-inline"><input type="radio" name="optradio">D</label>
+							<br>
+							<button type="submit" class="btn btn-default sbm">Submit</button>
+						</form>
+					</div>
+					<!-- Part 7 -->
+					<div id="part7" class="tab-pane fade">
+
+						<h3>Part 7: Reading Comprehension</h3>
+						<form method="post">
+							<!-- Sentence -->
+							<div class="form-group">
+								<h4>Sentence</h4>
+								<textarea class="form-control" rows="5" id="comment"></textarea>
+							</div>
+							<!-- Q&A -->
+							<div class="form-group">
+								<h4><label for="que">Question 1</label></h4>
+								<input type="text" class="form-control" id="que">
+							</div>
+							<h4>Answer Choices</h4>
+							<div class="form-group">
+								<label for="focusedInput">1</label>
+								<input class="form-control" id="focusedInput" type="text">
+							</div>
+							<div class="form-group">
+								<label for="focusedInput">2</label>
+								<input class="form-control" id="focusedInput" type="text">
+							</div>
+							<div class="form-group">
+								<label for="focusedInput">3</label>
+								<input class="form-control" id="focusedInput" type="text">
+							</div>
+							<div class="form-group">
+								<label for="focusedInput">4</label>
+								<input class="form-control" id="focusedInput" type="text">
+							</div>
+							<h4>Answer</h4>
+							<label class="radio-inline"><input type="radio" name="optradio">A</label>
+							<label class="radio-inline"><input type="radio" name="optradio">B</label>
+							<label class="radio-inline"><input type="radio" name="optradio">C</label>
+							<label class="radio-inline"><input type="radio" name="optradio">D</label>
+
+							<div class="form-group">
+								<h4><label for="que">Question 2</label></h4>
+								<input type="text" class="form-control" id="que">
+							</div>
+							<h4>Answer Choices</h4>
+							<div class="form-group">
+								<label for="focusedInput">1</label>
+								<input class="form-control" id="focusedInput" type="text">
+							</div>
+							<div class="form-group">
+								<label for="focusedInput">2</label>
+								<input class="form-control" id="focusedInput" type="text">
+							</div>
+							<div class="form-group">
+								<label for="focusedInput">3</label>
+								<input class="form-control" id="focusedInput" type="text">
+							</div>
+							<div class="form-group">
+								<label for="focusedInput">4</label>
+								<input class="form-control" id="focusedInput" type="text">
+							</div>
+							<h4>Answer</h4>
+							<label class="radio-inline"><input type="radio" name="optradio">A</label>
+							<label class="radio-inline"><input type="radio" name="optradio">B</label>
+							<label class="radio-inline"><input type="radio" name="optradio">C</label>
+							<label class="radio-inline"><input type="radio" name="optradio">D</label>
+
+							<div class="form-group">
+								<h4><label for="que">Question 3</label></h4>
+								<input type="text" class="form-control" id="que">
+							</div>
+							<h4>Answer Choices</h4>
+							<div class="form-group">
+								<label for="focusedInput">1</label>
+								<input class="form-control" id="focusedInput" type="text">
+							</div>
+							<div class="form-group">
+								<label for="focusedInput">2</label>
+								<input class="form-control" id="focusedInput" type="text">
+							</div>
+							<div class="form-group">
+								<label for="focusedInput">3</label>
+								<input class="form-control" id="focusedInput" type="text">
+							</div>
+							<div class="form-group">
+								<label for="focusedInput">4</label>
+								<input class="form-control" id="focusedInput" type="text">
+							</div>
+							<h4>Answer</h4>
+							<label class="radio-inline"><input type="radio" name="optradio">A</label>
+							<label class="radio-inline"><input type="radio" name="optradio">B</label>
+							<label class="radio-inline"><input type="radio" name="optradio">C</label>
+							<label class="radio-inline"><input type="radio" name="optradio">D</label>
+
+							<div class="form-group">
+								<h4><label for="que">Question 4</label></h4>
+								<input type="text" class="form-control" id="que">
+							</div>
+							<h4>Answer Choices</h4>
+							<div class="form-group">
+								<label for="focusedInput">1</label>
+								<input class="form-control" id="focusedInput" type="text">
+							</div>
+							<div class="form-group">
+								<label for="focusedInput">2</label>
+								<input class="form-control" id="focusedInput" type="text">
+							</div>
+							<div class="form-group">
+								<label for="focusedInput">3</label>
+								<input class="form-control" id="focusedInput" type="text">
+							</div>
+							<div class="form-group">
+								<label for="focusedInput">4</label>
+								<input class="form-control" id="focusedInput" type="text">
+							</div>
+							<h4>Answer</h4>
+							<label class="radio-inline"><input type="radio" name="optradio">A</label>
+							<label class="radio-inline"><input type="radio" name="optradio">B</label>
+							<label class="radio-inline"><input type="radio" name="optradio">C</label>
+							<label class="radio-inline"><input type="radio" name="optradio">D</label>
+							<br>
+							<button type="submit" class="btn btn-default sbm">Submit</button>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
